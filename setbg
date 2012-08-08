@@ -1,0 +1,16 @@
+#!/bin/sh
+
+if [ -f "$1" ]; then
+    echo "Setting $1 as standard wallpaper ..."
+    if [ -f .active_wp ]; then
+        rm .active_wp
+    fi
+    feh --bg-fill "$1"
+    ln -s "$1" .active_wp
+else
+    echo "Error: file $1 does not exist"
+    echo "Usage: setbg <file>"
+    echo "Run this from your wallpapers folder"
+fi
+
+exit 0
