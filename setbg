@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# To use, add `feh --bg-fill .active_wp` to your .xinitrc
+# Use this script in your wallpaper folder, or it won't
+# work, also point the .xinitrc line to your wallpaper
+# folder to make things easier
+
 if [ -f "$1" ]; then
     echo "Setting $1 as standard wallpaper ..."
     if [ -f .active_wp ]; then
